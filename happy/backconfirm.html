@@ -670,7 +670,7 @@
           <div class="el-date-editor el-input el-input--small el-input--prefix el-input--suffix el-date-editor--datetime">
            <!---->
            <span class="el-input__prefix"> </span>
-           <input type="text" autocomplete="off" name="happytime" placeholder="" class="el-input__inner" id="happytime" value="2020-06-06 10:08:22" />
+           <input type="text" autocomplete="off" name="happytime" placeholder="" class="el-input__inner" id="happytime"/>
            <!--
            <span class="el-input__suffix"><span class="el-input__suffix-inner"><i class="el-input__icon"></i>-->
              <!---->
@@ -910,11 +910,12 @@
         myFunction(); 
 
     } 
-    function myFunction() {
-        var temp = new Date();
-        var date = dateFormat("YYYY-mm-dd HH:MM:SS", temp)
-        document.getElementById('sadtime').value=date;
-    }
+     function myFunction() {
+         var temp = new Date();
+         var date = dateFormat("YYYY-mm-dd HH:MM:SS", temp)
+         document.getElementById('sadtime').value = date;
+         document.getElementById('happytime').value = date;
+     }
     function dateFormat(fmt, date) {
     let ret;
     const opt = {
